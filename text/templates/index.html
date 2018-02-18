@@ -1,0 +1,33 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <title>CallTrackingMetrics Skills Test</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'text/css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Fugaz+One|Raleway:300" rel="stylesheet">
+  </head>
+  <body>
+
+    <h1 class="header">Signup Today!</h1>
+    <form id="text_signup" method="POST">
+      {% csrf_token %}
+
+      <label for="name_input">Name</label>
+      <input type="text" name="name" placeholder="Enter name:" id="name_input">
+
+      <label for="phone_input">Phone Number</label>
+      <input type="tel" name="phone" placeholder="(XXX)-XXX-XXXX" id="phone_input" minlength="10" maxlength="14">
+
+      <label for="message">Text Message</label>
+      <textarea name="message" placeholder="Send yourself a message!" id="message"></textarea>
+
+      <input type="submit" name="submit" value="Submit" id="submit">
+
+    </form>
+
+  <script type="text/javascript" src="{% static 'text/js/verify.js' %}"></script>
+  </body>
+</html>

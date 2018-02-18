@@ -1,0 +1,123 @@
+body {
+  background-color: deepskyblue;
+
+  display: grid;
+  grid-template-areas:
+  "lpad header rpad"
+  "lpad form rpad"
+  "lpad footer rpad";
+  /*grid-template-columns: auto auto auto;*/
+  grid-template-rows: auto auto 1fr;
+  align-items: | center |;
+
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+
+  background: linear-gradient(deepskyblue, aquamarine);
+}
+
+h1 {
+  text-align: center;
+  font-family: "Fugaz One", cursive;
+  font-size: 4em;
+  color: white;
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+
+  color: white;
+  font-family: "Fugaz One", sans-serif;
+  font-size: 2em;
+}
+
+form * {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+/*  max-width: 500px;
+  min-width: 250px;*/
+}
+
+input {
+  border-radius: 10px;
+  border: solid transparent 5px;
+  font-size: .6em;
+  padding: 5px;
+  font-family: "Raleway", sans-serif;
+  width: 290px;
+}
+
+input[type=submit] {
+  margin-top: 20px;
+  width: 300px;
+  font-family: "Fugaz One", sans-serif;
+  background: transparent;
+  font-size: .75em;
+  border: slategrey solid 5px;
+  color: slategrey;
+  pointer-events: none;
+}
+
+input[type=submit].unlocked {
+  pointer-events: auto;
+  border-color: greenyellow;
+  color: green;
+}
+
+input[type=submit].unlocked:hover {
+  border-color: chartreuse;
+}
+
+input[type=submit].unlocked:active {
+  border-color: lime;
+  color: limegreen;
+}
+
+
+
+textarea {
+  border-radius: 10px;
+  border-style: none;
+  font-size: .5em;
+  font-family: "Raleway", sans-serif;
+  padding: 15px;
+  width: 270px;
+  height: 150px;
+  resize: none;
+}
+
+.header {
+  grid-area: header;
+}
+
+#text_signup {
+  grid-area: form;
+}
+
+.lpad {
+  grid-area: lpad;
+  background: linear-gradient(to right, blueviolet, deepskyblue);
+}
+
+.rpad {
+  background-color: green;
+  grid-area: rpad;
+  background: linear-gradient(to left, blueviolet, deepskyblue);
+}
+
+.valid {
+  border: solid green 5px;
+  background: greenyellow;
+}
+
+.invalid {
+  border: solid firebrick 5px;
+  background: red;
+}
