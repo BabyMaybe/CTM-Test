@@ -111,8 +111,6 @@ function mark_invalid(element) {
 
 // Removes formatting prior to sending to server
 function finalize(e) {
-  console.log('finalizing');
   phone_input.value = clean_phone(phone_input.value);
-  console.log(phone_input.value);
 }
 
